@@ -1,15 +1,31 @@
-import { Navbar, Welcome, Footer, Services, Transactions } from "./components";
+import { Navbar } from "./components";
+import Account from "./components/Account";
+import HomePage from "./components/HomePage";
+import Price from "./components/Price";
 
-const App = () => (
-  <div className="min-h-screen">
-    <div className="gradient-bg-welcome">
+function App() {
+  let component;
+  switch (window.location.pathname) {
+    case "/":
+      component = <HomePage />;
+      break;
+    case "/price":
+      component = <Price />;
+      break;
+    case "/account":
+      component = <Account />;
+      break;
+
+    default:
+      break;
+  }
+
+  return (
+    <>
       <Navbar />
-      <Welcome />
-    </div>
-    <Services />
-    <Transactions />
-    <Footer />
-  </div>
-);
+      {component}
+    </>
+  );
+}
 
 export default App;
