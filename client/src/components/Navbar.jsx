@@ -61,6 +61,9 @@ function NavBar() {
         <li>
           <a href="/account">account</a>
         </li>
+        <li>
+          <a href="/coin">Coin</a>
+        </li>
       </ul>
     </nav>
   );

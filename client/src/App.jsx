@@ -1,5 +1,6 @@
 import { Navbar } from "./components";
 import Account from "./components/Account";
+import CoinPage from "./components/CoinPage";
 import HomePage from "./components/HomePage";
 import Price from "./components/Price";
 
@@ -15,7 +16,9 @@ function App() {
     case "/account":
       component = <Account />;
       break;
-
+    case "/coin":
+      component = <CoinPage />;
+      break;
     default:
       break;
   }
