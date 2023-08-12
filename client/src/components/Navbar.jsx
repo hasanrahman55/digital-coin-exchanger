@@ -52,18 +52,14 @@ function NavBar() {
   const Links = [
     { name: "Home", link: "/" },
     { name: "Coin", link: "/coin" },
-
   ];
   let [open, setOpen] = useState(false);
 
   return (
     <div className="shadow-md w-full  justify-between top-0 left-0">
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
-        <div
-          className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
-      text-gray-800"
-        >
-          Designer
+        <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins]  text-gray-800">
+          Digital Coin Exchanger
         </div>
 
         <ul
@@ -75,7 +71,7 @@ function NavBar() {
             <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7">
               <a
                 href={link.link}
-                className="text-gray-800 hover:text-gray-400 duration-500"
+                className=" text-gray-800 hover:text-gray-400 duration-500"
               >
                 {link.name}
               </a>
